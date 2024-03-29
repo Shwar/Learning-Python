@@ -22,3 +22,13 @@ del(['Age'])
 #Keyword in used to check if an item is available
 
 'Simon' in DICT #True
+
+#update method
+DICT.update({"Name":"John"})
+
+DICT1 = DICT.copy()  #Creating a copy of dictionary
+
+#method clear() removes all the items in the dictionary 
+# DICT1.clear() the dict can still be used
+
+list1 = list[DICT.items()]
