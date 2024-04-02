@@ -17,6 +17,8 @@ set2 = {1,3.5,'Daniel'}
 
 set3 = set1 & set2
 
+print(set3)
+
 #Perform various operations on sets: `union`, `intersection`, `difference`, symmetric difference
 
 unions = set2.union(set1)
