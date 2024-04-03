@@ -33,6 +33,20 @@ for z in y:
 seq = [1,2,3,4]
 
 for i in range(0,5):
-    print(seq[i] = 3)
-     
+    print(i)
 
+     
+#While loop
+ # Code to be executed while the condition is true
+    # Indentation is crucial to indicate the scope of the loop
+
+    num = 1
+
+    while num <= 10:
+        print(num)
+        num+=1
+
+        #The while loop is used to repeatedly execute a block of code as long as a given condition is True. In this case, the condition is count <= 10,
+        # meaning the loop will continue as long as count is less than or equal to 10.
+
+        #We use for loop when we are sure  of the iterations and length and while loop is used when we want to print valuesa s long as condition given is true
