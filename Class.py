@@ -11,7 +11,9 @@
 
 #Class attributes are variables shared among all class instances (objects). In below code tyhe max_speed
 
+import pywhatkit
 
+"""
 
 
 class MyCar:
@@ -62,6 +64,18 @@ def drawCircle(self):
 RedCircle = circle(10,"Red")   
 
 drawCircle(RedCircle)
+"""
+import pywhatkit
+
+try:
+    pywhatkit.sendwhatmsg("+254700584878", "Hello there", 9, 15)
+except Exception as e:
+    print("An error occurred:", e)
+else:
+    print("Message sent successfully!")
+
+
+
 
         
 

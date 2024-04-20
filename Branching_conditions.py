@@ -49,4 +49,19 @@ for i in range(0,5):
         #The while loop is used to repeatedly execute a block of code as long as a given condition is True. In this case, the condition is count <= 10,
         # meaning the loop will continue as long as count is less than or equal to 10.
 
+       
+       
         #We use for loop when we are sure  of the iterations and length and while loop is used when we want to print valuesa s long as condition given is true
+
+
+        # Try for catching error in python
+        try: 
+            num = int(input("Enter a number: ")) 
+        except ValueError: 
+            print("Invalid input. Please enter a valid number") 
+        else: 
+            print("You entered:", num)
+
+            # try: # Code that might raise an exception except 
+        #ExceptionType: # Code to handle the exception 
+        #finally: # Code that always executes regardless whether an exception occurs
