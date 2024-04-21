@@ -7,7 +7,7 @@
 #Mode: The mode parameter specifies the purpose of opening the file, such as 'r' for reading, 'w' for writing, or 'a' for appending.
 
 # Using the read method, you can retrieve the complete content of a file
-file1 = open("Example.txt", "r")
+"""
 print(file1)
 
 print(file1.closed)
@@ -54,4 +54,46 @@ while True:
         break
     print(line)
     
+"""
+    #Writing files
 
+with open("Example2.txt", "w") as file3:
+        file3.write("Line A\n")
+        file3.write("Line B")
+
+# Using a for loop
+lines = "Line A1\n", "Line A2\n", "Line A3\n"
+
+with open("Example3.txt", "w") as file4:
+        for line in lines:
+                file4.write(line)
+
+
+# We use append method to use existing file instead of creating new
+
+with open("Example3.txt", "a") as file5:
+        file5.write("This is line 4")
+
+
+# We can copy a file to another file
+
+# Open the source file for reading
+with open("Example3.txt", "r") as readfile:
+        
+        # Open the destination file for writing
+        with open("Example4.txt","w") as writefile:
+                
+                 # Read lines from the source file and copy them to the destination file one by one
+                for line in readfile:
+                        writefile.write(line + "\n")      
+
+
+new_line = "This is a new line"     
+
+with open("Example4.txt","a") as file5:
+        file5.write(new_line)
+
+ # We can use mode 'a+' to append and read        
+
+with open("Example4.txt", "a+") as file6:
+        file6.write("This is line E \n")        
