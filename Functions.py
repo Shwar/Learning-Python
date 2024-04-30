@@ -107,13 +107,14 @@ print(acc2.acc_info())
 
 
 import statistics
-data = []
+data = [30,40,50,60,70,80,90,100,110]
 maximum = max(data)
 minimum = min(data)
 
 class Statistics:
     def __init__(self,data):
         self.data = data
+      
 
     def Count(self):
         return data.count(data)
@@ -140,5 +141,5 @@ class Statistics:
         print(f'Variance:{self.var()}')
         print(f'Mode:{self.mode()}')
 
-stat1 = Statistics([20,30,40,50,60])
+stat1 = Statistics()
 print(stat1.describe())

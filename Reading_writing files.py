@@ -8,6 +8,8 @@
 
 # Using the read method, you can retrieve the complete content of a file
 """
+file1 =open('Example.txt', 'r') 
+
 print(file1)
 
 print(file1.closed)
@@ -48,13 +50,15 @@ with open("Example.txt","r") as file:
     print(content)
 
 #Looping through lines: Typically, you use a while loop to read lines until no more lines are left 
-while True:
-    line = file2.readline()
+with open("Example.txt","r") as file5:
+       
+ while True:
+    line = file5.readline()
     if not line:
         break
     print(line)
     
-"""
+
     #Writing files
 
 with open("Example2.txt", "w") as file3:
@@ -97,3 +101,54 @@ with open("Example4.txt","a") as file5:
 
 with open("Example4.txt", "a+") as file6:
         file6.write("This is line E \n")        
+
+
+
+ 
+with open("Example5.txt", "a") as file6:
+    while True:
+        item = input("Enter your name please")
+
+        if not item:
+           break
+
+        file6.write(item + '\n')
+ 
+print(f'Welcome {item}') 
+"""
+def word_count(file_name):
+    word_freq = {}
+
+    try:
+        with open(file_name, 'r') as file:
+            for line in file:
+                words = line.split()
+
+                for word in words:
+                    word = word.strip('.,!?;;()[] {}')
+
+                    word = word.lower()
+
+                    if word:
+                        if word in word_freq:
+                            word_freq[word] +=1
+                        else:
+                            word_freq[word] = 1
+
+    except FileNotFoundError:
+        print(f"Error: The file '{file_name}' does not exist.")  
+        return None
+def main():
+    file_name = input("Enter the name of the text file: ")
+
+    word_freq = word_count(file_name)
+
+    if word_freq:
+        print("Word Frequency: ")
+        for word, freq in word_freq.items():
+            print(f"{word}: {freq}")
+
+if __name__ == "_main__":
+    main()            
+
+word_count('Example5.txt')
