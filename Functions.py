@@ -141,5 +141,34 @@ class Statistics:
         print(f'Variance:{self.var()}')
         print(f'Mode:{self.mode()}')
 
-stat1 = Statistics()
-print(stat1.describe())
+#stat1 = Statistics()
+#print(stat1.describe())
+
+
+def AreaOfCircle(r =100):
+    pi = 3.142
+    Area = pi * r*r
+    return Area
+xy = AreaOfCircle(10)
+print(xy)
+print(AreaOfCircle())
+
+def addNums(*nums):
+    sum = 0
+
+    
+    for num in nums:
+            sum +=num
+    return sum
+
+    
+
+xz = addNums(1,2,3,4,5)
+print(xz)
+
+def Celcius_to_farenheit(C):
+    F = (C * 9/5) +32
+    return F 
+
+print(Celcius_to_farenheit(20))
+
