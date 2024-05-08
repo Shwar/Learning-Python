@@ -172,3 +172,24 @@ def Celcius_to_farenheit(C):
 
 print(Celcius_to_farenheit(20))
 
+import math
+
+def QuadraticEquation(a, b,c):
+    discriminant = (b**2)- (4*a*c)
+
+    if discriminant > 0:
+        root1 = (-b + math.sqrt(discriminant)) / 2*a
+        root2 = (-b - math.sqrt(discriminant)) / 2*a
+        return root1, root2
+    elif discriminant == 0:
+        root = -b / (2*a)
+        return root, root
+    
+a = 2
+b= 3
+c=1
+
+print(QuadraticEquation(a, b,c))
+print(QuadraticEquation(1,5,6))
+
+
